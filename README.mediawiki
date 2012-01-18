@@ -1,0 +1,43 @@
+{|
+|-
+| <p>The structWSF upgrader takes an existing structWSF instance an upgrade it to the latest version. What the upgrader does is to:
+
+# Upgrade the code of structWSF to its latest version
+# Add potentially new configuration(s)
+# Delete potentially deprecated configuration(s)
+# Modify potentially modified configuration(s)
+# Install potentially new software(s)
+
+Depending on the version to upgrade, the structWSF upgrader will do one of these things, or all of them. If a step is needed by the user, it will tell him what needs to be done.
+
+The upgrader works as follow. It checks the version of the current structWSF instance. Then, it checks if a new version is available. If a new version is available, then it upgrades the current version to the immediate next version. If three versions have been released since the last upgrade, then the other two versions won't immediately be installed. The upgrader will need to be ran for each of these versions until it tells the user that no new version is available to be installed.
+
+As you can see, upgrading a structWSF instance is really an iterative process. An instance needs to be upgrade to the immediate next version. This is needed to ensure that all the modifications that are needed between versions are applied to a running instance.</p>
+| [[File:http://dev.openstructs.org/imgs/osf_installer.png]]
+|}
+
+== Requirements ==
+# Ubuntu 10.04 (Lucid)
+# 32 Bits Operating System
+# Access to internet from your server
+# a previously installed version of structWSF that has a version greater or equal to: <code>v1.0a92</code>
+
+== Upgrading structWSF ==
+The only steps needed to upgrade a running structWSF instance are:
+
+# <code>cd /mnt/</code>
+# <code>sudo wget https://github.com/downloads/structureddynamics/structWSF-Upgrader/structwsf-upgrader-v1.00.zip</code>
+# <code>sudo unzip structwsf-upgrader-v1.00.zip</code>
+# <code>cd `ls -d structureddynamics*/`</code>
+# <code>sudo chmod 755 structwsf-upgrade.sh</code>
+# <code>./structwsf-upgrade.sh</code>
+
+== System Integration Tests ==
+
+It is always a good thing to run the system integration tests after each upgrade to make sure that your instance is always properly working. [https://github.com/structureddynamics/structWSF-Tests-Suites These tests are available here]
+
+== For More Help ==
+If you are experiencing issues with this upgrade process, please do make an outreach to the [http://groups.google.com/group/open-semantic-framework Open Semantic Web Mailing List].
+
+Describe the specifications of the server where you are trying to upgrade structWSF. Tell us where the issue happens in the upgrade process. Also add any logs that could be helpful in debugging the issue.
+

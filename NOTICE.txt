@@ -1,0 +1,15 @@
+===============================================================
+== Notice of Attribution for the Apache License, Version 2.0 ==
+===============================================================
+
+structWSF Upgrader, an upgrading application for structWSF.
+Copyright 2008-2012. Structured Dynamics LLC.
+
+The structWSF Upgrader is one of the contributing
+components to the Open Semantic Framework (OSF); 
+see http://openstructs.org. Additional technical documentation for
+OSF and its related OSF components is available at
+http://techwiki.openstructs.org.
+
+This application includes software developed by
+Structured Dynamics LLC (http://structureddynamics.com/).
