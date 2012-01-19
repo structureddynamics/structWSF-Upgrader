@@ -41,7 +41,15 @@ cecho ()                     # Color-echo.
 
 cecho "\n\nBackuping the current version's files...\n"
 
+DATA_INI=$( sed -rn '\|data_ini| s|.*public.*static.*=.*"(.+)".*|\1|p' ${STRUCTWSFFOLDER}/framework/WebService.php )
+NETWORK_INI=$( sed -rn '\|network_ini| s|.*public.*static.*=.*"(.+)".*|\1|p' ${STRUCTWSFFOLDER}/framework/WebService.php )
+
+# Make sure there is no trailing slashes
+DATA_INI_FOLDER=$(echo "${DATA_INI}" | sed -e "s/\/*$//")
+
 sudo cp -af $STRUCTWSFFOLDER"/" "/tmp/structWSF-backup-"$STRUCTWSFPREVIOUSVERSION"/"
+sudo cp -af $DATA_INI_FOLDER"/data.ini" "/tmp/structWSF-backup-"$STRUCTWSFPREVIOUSVERSION"/data.ini"
+
 
 sudo mkdir upgrade
 
@@ -62,11 +70,6 @@ sudo mv -f * ../
 cd ../
 
 sudo rm -rf `ls -d structureddynamics*/`
-
-
-DATA_INI=$( sed -rn '\|data_ini| s|.*public.*static.*=.*"(.+)".*|\1|p' ${STRUCTWSFFOLDER}/framework/WebService.php )
-NETWORK_INI=$( sed -rn '\|network_ini| s|.*public.*static.*=.*"(.+)".*|\1|p' ${STRUCTWSFFOLDER}/framework/WebService.php )
-
 
 cecho "\n\nRemove default settings...\n"
 
