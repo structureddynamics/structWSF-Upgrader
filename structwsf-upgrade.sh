@@ -1,3 +1,4 @@
+#!/bin/bash
 
 STRUCTWSFVERSION="1.0a93"
 STRUCTWSFFOLDER="/usr/share/structwsf/"
