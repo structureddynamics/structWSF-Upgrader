@@ -123,9 +123,10 @@ cecho "\n\nDelete the deprecated RdfProperty class...\n"
 
 sudo rm -f $STRUCTWSFFOLDER"/framework/RdfProperty.php"
 
-
 cd ..
 rm -rf upgrade
+
+cecho "\n\n[[ Important Note: if you are using conStruct, you have to upgrade it to the conStruct version 6.x-1.0-beta10 or above. ]]\n\n" $red
 
 cecho "\n\nThe files of the previous version are still available in that folder: /tmp/structWSF-backup-"$STRUCTWSFPREVIOUSVERSION"/\n" $green
 
