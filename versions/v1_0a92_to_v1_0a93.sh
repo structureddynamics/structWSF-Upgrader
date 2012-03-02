@@ -73,7 +73,6 @@ sudo rm -rf `ls -d structureddynamics*/`
 
 cecho "\n\nRemove default settings...\n"
 
-#sudo rm framework/WebService.php
 sudo rm data.ini
 sudo rm network.ini
 sudo rm index.php
