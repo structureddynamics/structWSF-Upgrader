@@ -1,6 +1,6 @@
 #!/bin/bash
 
-STRUCTWSFVERSION="1.0a93"
+STRUCTWSFVERSION="1.0a94"
 STRUCTWSFFOLDER="/usr/share/structwsf/"
 
 # From: http://ajdiaz.wordpress.com/2008/02/09/bash-ini-parser/
@@ -148,7 +148,7 @@ UPGRADEVERSIONS=1
 
 while [ $UPGRADEVERSIONS = 1 ]; do
 
-  cecho "Upgrade to version: $nextVersion"
+  cecho "Upgrade to version: "$nextVersion
 
   cfg.section.$nextVersion
   
@@ -158,10 +158,13 @@ while [ $UPGRADEVERSIONS = 1 ]; do
     "versions/"$updateScript $STRUCTWSFFOLDER
   fi
 
-  if [[ $nextVersion = none || $nextVersion = $STRUCTWSFVERSION ]]
+  if [[ $nextVersion = none || $CURRENTSTRUCTWSFVERSION = $STRUCTWSFVERSION ]]
   then
     UPGRADEVERSIONS=0
   fi  
+  
+  CURRENTSTRUCTWSFVERSION=$nextVersion
+  
 done 
 
 cecho "structWSF successfully upgraded to version $STRUCTWSFVERSION" $green
