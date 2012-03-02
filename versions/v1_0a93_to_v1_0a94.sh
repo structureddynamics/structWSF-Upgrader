@@ -50,7 +50,7 @@ cecho "\n\nBackuping the current version's files...\n"
 
 DATA_INI=$( sed -rn '\|data_ini| s|.*public.*static.*=.*"(.+)".*|\1|p' ${STRUCTWSFFOLDER}/framework/WebService.php )
 NETWORK_INI=$( sed -rn '\|network_ini| s|.*public.*static.*=.*"(.+)".*|\1|p' ${STRUCTWSFFOLDER}/framework/WebService.php )
-cecho "Debug[2] (NETWORK_INI): $NETWORK_INI" $red
+
 sudo cp -af $STRUCTWSFFOLDER"/" "/tmp/structWSF-backup-"$STRUCTWSFPREVIOUSVERSION"/"
 
 sudo mkdir upgrade
