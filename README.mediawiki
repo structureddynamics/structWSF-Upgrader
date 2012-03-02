@@ -26,8 +26,8 @@ As you can see, upgrading a structWSF instance is really an iterative process. A
 The only steps needed to upgrade a running structWSF instance are:
 
 # <code>cd /mnt/</code>
-# <code>sudo wget https://github.com/downloads/structureddynamics/structWSF-Upgrader/structWSF-Upgrader-v1.0a1.zip</code>
-# <code>sudo unzip structWSF-Upgrader-v1.0a1.zip</code>
+# <code>sudo wget https://github.com/downloads/structureddynamics/structWSF-Upgrader/structWSF-Upgrader-v1.0a2.zip</code>
+# <code>sudo unzip structWSF-Upgrader-v1.0a2.zip</code>
 # <code>cd `ls -d structureddynamics*/`</code>
 # <code>sudo chmod 755 structwsf-upgrade.sh</code>
 # <code>./structwsf-upgrade.sh</code>
