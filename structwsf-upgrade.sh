@@ -1,6 +1,6 @@
 #!/bin/bash
 
-STRUCTWSFVERSION="1.0a94"
+STRUCTWSFVERSION="1.1.0"
 STRUCTWSFFOLDER="/usr/share/structwsf/"
 
 # From: http://ajdiaz.wordpress.com/2008/02/09/bash-ini-parser/
