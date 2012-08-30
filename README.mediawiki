@@ -34,7 +34,7 @@ The only steps needed to upgrade a running structWSF instance are:
 
 == System Integration Tests ==
 
-It is always a good thing to run the system integration tests after each upgrade to make sure that your instance is always properly working. [https://github.com/structureddynamics/structWSF-Tests-Suites These tests are available here]
+It is always a good thing to run the system integration tests after each upgrade to make sure that your instance is always properly working. [https://github.com/structureddynamics/structWSF-Tests-Suites/tree/1.1 These tests are available here]
 
 == For More Help ==
 If you are experiencing issues with this upgrade process, please do make an outreach to the [http://groups.google.com/group/open-semantic-framework Open Semantic Web Mailing List].
